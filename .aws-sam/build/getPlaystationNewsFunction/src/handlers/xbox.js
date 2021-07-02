@@ -18,6 +18,7 @@ exports.getXboxNewsHandler = async (res, req) => {
 
     } catch (error) {
         console.log(`Err Xbox: ${error}`);
+        helper.formatError(error);
     }
 
     return helper.send(news);

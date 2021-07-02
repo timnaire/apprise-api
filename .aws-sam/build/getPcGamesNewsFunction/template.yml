@@ -40,6 +40,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: "getPcGamesNewsFunction"
+      CodeUri: ./
       Runtime: nodejs10.x
       MemorySize: 128
       Timeout: 60
@@ -57,6 +58,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: "getNintendoNewsFunction"
+      CodeUri: ./
       Runtime: nodejs10.x
       MemorySize: 128
       Timeout: 60
@@ -75,6 +77,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: "getPlaystationNewsFunction"
+      CodeUri: ./
       Runtime: nodejs10.x
       Timeout: 60
       Handler: src/handlers/playstation.getPlaystationNewsHandler
@@ -91,6 +94,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: "getXboxNewsFunction"
+      CodeUri: ./
       Runtime: nodejs10.x
       Timeout: 60
       Handler: src/handlers/xbox.getXboxNewsHandler

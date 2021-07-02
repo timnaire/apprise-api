@@ -18,6 +18,7 @@ exports.getPlaystationNewsHandler = async (res, req) => {
 
     } catch (error) {
         console.log(`Err Playstation: ${error}`);
+        helper.formatError(error);
     }
 
     return helper.send(news);

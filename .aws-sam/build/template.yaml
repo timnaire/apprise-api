@@ -18,6 +18,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: getPcGamesNewsFunction
+      CodeUri: getPcGamesNewsFunction
       Runtime: nodejs10.x
       MemorySize: 128
       Timeout: 60
@@ -30,11 +31,11 @@ Resources:
             Method: get
             RestApiId:
               Ref: ApiGatewayApi
-      CodeUri: getPcGamesNewsFunction
   getNintendoNewsFunction:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: getNintendoNewsFunction
+      CodeUri: getNintendoNewsFunction
       Runtime: nodejs10.x
       MemorySize: 128
       Timeout: 60
@@ -47,11 +48,11 @@ Resources:
             Method: get
             RestApiId:
               Ref: ApiGatewayApi
-      CodeUri: getNintendoNewsFunction
   getPlaystationNewsFunction:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: getPlaystationNewsFunction
+      CodeUri: getPlaystationNewsFunction
       Runtime: nodejs10.x
       Timeout: 60
       Handler: src/handlers/playstation.getPlaystationNewsHandler
@@ -63,11 +64,11 @@ Resources:
             Method: get
             RestApiId:
               Ref: ApiGatewayApi
-      CodeUri: getPlaystationNewsFunction
   getXboxNewsFunction:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: getXboxNewsFunction
+      CodeUri: getXboxNewsFunction
       Runtime: nodejs10.x
       Timeout: 60
       Handler: src/handlers/xbox.getXboxNewsHandler
@@ -79,4 +80,3 @@ Resources:
             Method: get
             RestApiId:
               Ref: ApiGatewayApi
-      CodeUri: getXboxNewsFunction

@@ -19,6 +19,7 @@ exports.getPcGamesNewsHandler = async (res, req) => {
 
     } catch (error) {
         console.log(`Err Nintendo: ${error}`);
+        helper.formatError(error);
     }
 
     return helper.send(news);

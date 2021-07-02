@@ -15,3 +15,16 @@ exports.send = (body) => {
 
     return response;
 }
+
+exports.formatError = (error) => {
+    const response = {
+        "statusCode": error.statusCode,
+        "headers": {
+            "Content-Type": "text/plain",
+            "x-amzn-ErrorType": error.code
+        },
+        "isBase64Encoded": false,
+        "body": error.code + ": " + error.message
+    }
+    return response;
+}
