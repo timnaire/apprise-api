@@ -49,60 +49,60 @@ Resources:
         ApiEvent:
           Type: Api
           Properties:
-            Path: /get/pcgames/news
+            Path: /getpcgamesnews
             Method: get
             RestApiId:
               Ref: ApiGatewayApi
 
-  # getNintendoNewsFunction:
-  #   Type: AWS::Serverless::Function
-  #   Properties:
-  #     FunctionName: "getNintendoNewsFunction"
-  #     CodeUri: ./
-  #     Runtime: nodejs10.x
-  #     MemorySize: 128
-  #     Timeout: 60
-  #     Handler: src/handlers/nintendo.getNintendoNewsHandler
-  #     Events:
-  #       ApiEvent:
-  #         Type: Api
-  #         Properties:
-  #           Path: /get/nintendo/news
-  #           Method: get
-  #           RestApiId:
-  #             Ref: ApiGatewayApi
+  getNintendoNewsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: "getNintendoNewsFunction"
+      CodeUri: ./
+      Runtime: nodejs10.x
+      MemorySize: 128
+      Timeout: 60
+      Handler: src/handlers/nintendo.getNintendoNewsHandler
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /getnintendonews
+            Method: get
+            RestApiId:
+              Ref: ApiGatewayApi
       
 
-  # getPlaystationNewsFunction:
-  #   Type: AWS::Serverless::Function
-  #   Properties:
-  #     FunctionName: "getPlaystationNewsFunction"
-  #     CodeUri: ./
-  #     Runtime: nodejs10.x
-  #     Timeout: 60
-  #     Handler: src/handlers/playstation.getPlaystationNewsHandler
-  #     Events:
-  #       ApiEvent:
-  #         Type: Api
-  #         Properties:
-  #           Path: /get/playstation/news
-  #           Method: get
-  #           RestApiId:
-  #             Ref: ApiGatewayApi
+  getPlaystationNewsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: "getPlaystationNewsFunction"
+      CodeUri: ./
+      Runtime: nodejs10.x
+      Timeout: 60
+      Handler: src/handlers/playstation.getPlaystationNewsHandler
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /getplaystationnews
+            Method: get
+            RestApiId:
+              Ref: ApiGatewayApi
 
-  # getXboxNewsFunction:
-  #   Type: AWS::Serverless::Function
-  #   Properties:
-  #     FunctionName: "getXboxNewsFunction"
-  #     CodeUri: ./
-  #     Runtime: nodejs10.x
-  #     Timeout: 60
-  #     Handler: src/handlers/xbox.getXboxNewsHandler
-  #     Events:
-  #       ApiEvent:
-  #         Type: Api
-  #         Properties:
-  #           Path: /get/xbox/news
-  #           Method: get
-  #           RestApiId:
-  #             Ref: ApiGatewayApi
+  getXboxNewsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: "getXboxNewsFunction"
+      CodeUri: ./
+      Runtime: nodejs10.x
+      Timeout: 60
+      Handler: src/handlers/xbox.getXboxNewsHandler
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /getxboxnews
+            Method: get
+            RestApiId:
+              Ref: ApiGatewayApi
